@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Google Keep</title>
+</head>
+
+<body>
+    <div class="container mx-auto p-8 border flex flex-col items-center space-y-4 ">
+        <button class="px-8 py-4 bg-[#212529]  text-white font-bold uppercase text-md rounded  " id="newNote">Add New
+            Note</button>
+        <div class=" fade-in w-[560px] mx-auto flex flex-col border-2 rounded border-[#212529] p-8 space-y-4  items-between hidden justify-between"
+            id="mainBox">
+            <input type="text" id="heading" placeholder="Note Title"
+                class=" text-md text-[#001219]  border-1 py-4 px-14 border outline-none uppercase" />
+            <textarea id="bodyText" cols="32.5" rows="10" class="text-[#03071e] p-3 border  resize-none outline-none  "
+                placeholder="Enter Your Notes Here ...">Enter Your Notes Here ...  </textarea>
+            <div class="mx-auto">
+                <button class="px-8 py-4 bg-[#212529] text-white font-bold uppercase text-md rounded  " id="addNote">Add
+                    Note</button>
+                <button class="px-12 py-4 bg-[#212529] text-white font-bold uppercase text-md rounded  "
+                    id="closeNote">Close </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto my-8   ">
+        <div id="notes" class="grid grid-cols-1 md:grid-cols-3 gap-y-4 space-x-4 flex flex-wrap">
+
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
